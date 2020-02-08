@@ -1,6 +1,7 @@
-# Luke's vim helpers
+# Vim IPA bindings
 
-Just some little things I source in my vimrc. Moving these from the [voidrice](https://github.com/lukesmithxyz/voidrice) repo for extensibility's sake. Mostly language-related.
+Extended IPA character mappings. Added common symbols for Germanic languages, cardinal vowels, stress marks and length marks. More extensions are planned.
+Based on [Luke Smith](https://github.com/LukeSmithxyz)
 
 ## Who's who?
 
