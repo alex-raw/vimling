@@ -1,7 +1,7 @@
 # Vim IPA bindings
 
 Extended IPA character mappings. Added common symbols for Germanic languages, cardinal vowels, stress marks and length marks. More extensions are planned.
-Based on [Luke Smith](https://github.com/LukeSmithxyz)
+Based on [Luke Smith](https://github.com/LukeSmithxyz)'s vimling.
 
 ## Who's who?
 
