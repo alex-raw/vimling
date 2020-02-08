@@ -11,14 +11,35 @@ endfunction
 function! IPA()
 	echo "IPA macros activated"
 	let g:IPAOn=1
+
+	" nasal
 	imap ,nn ɲ̊
 	imap ,gn ɲ
 	imap ,ng ŋ
-	imap ,' ʔ
+	imap ,rn ɳ
+	imap ,nq ɴ
+
+	" rhotic
+	imap ,fr ʁ
+	imap ,rr ʀ
+	imap ,er ɹ
+	imap ,fl ɾ
+	imap ,ar ɻ
+
+	" lateral
+	imap ,rl ɭ
+	imap ,ll ɬ
+	imap ,ly ʎ
+
+	" sibilant
 	imap ,sh ʃ
 	imap ,zh ʒ
 	imap ,xi ɕ
 	imap ,zi ʑ
+	imap ,rs ʂ
+	imap ,rz ʐ
+
+	" fricative
 	imap ,ph ɸ
 	imap ,bh β
 	imap ,th θ
@@ -27,67 +48,102 @@ function! IPA()
 	imap ,jj ʝ
 	imap ,gh ɣ
 	imap ,xx χ
-	imap ,fr ʁ
 	imap ,HH ħ
 	imap ,hh ɦ
-	imap ,vv ʋ
-	imap ,er ɹ
-	imap ,fl ɾ
-	imap ,bb ʙ
-	imap ,ih ɨ
+
+	" vowels
 	imap ,ii ɪ
-	imap ,eu ɯ̽
-	imap ,uu ʊ
-	imap ,uh ə
-	imap ,eh ɛ
-	imap ,oe œ
-	imap ,au ɔ
+	imap ,ee ɛ
 	imap ,ae æ
-	imap ,aa ɐ
-	imap ,OE ɶ
 	imap ,ah ɑ
 	imap ,ba ɒ
+	imap ,up ʌ
+	imap ,au ɔ
+
+	imap ,ue ʏ
+	imap ,oi ø
+	imap ,oe œ
+	imap ,OE ɶ
+	imap ,io ɤ
+	imap ,eu ɯ
+	imap ,uu ʊ
+	imap ,iu ɨ
+	imap ,ui ʉ
+	imap ,OE ɶ
+	imap ,uh ə
+	imap ,aa ɐ
+	imap ,ur ɜ
+
+	" others
+	imap ,vv ʋ
+	imap ,bb ʙ
+	imap ,? ʔ
+
+	" various
+	imap ,: ː
+	imap ,. ˑ
+	imap ,( 〈
+	imap ,) 〉
+	imap ,(( 〈〉<left>
+	imap ,' ˈ
+	imap ,; ˌ
+
 endfunction
 
 function! IPAOff()
 	echo "IPA macros off."
 	let g:IPAOn=0
-	iunmap ,nn
-	iunmap ,gn
-	iunmap ,ng
-	iunmap ,'
-	iunmap ,sh
-	iunmap ,zh
-	iunmap ,xi
-	iunmap ,zi
-	iunmap ,ph
-	iunmap ,bh
-	iunmap ,th
-	iunmap ,dh
-	iunmap ,cc
-	iunmap ,jj
-	iunmap ,gh
-	iunmap ,xx
-	iunmap ,fr
-	iunmap ,HH
-	iunmap ,hh
-	iunmap ,vv
-	iunmap ,er
-	iunmap ,fl
-	iunmap ,bb
-	iunmap ,ih
-	iunmap ,ii
-	iunmap ,eu
-	iunmap ,uu
-	iunmap ,uh
-	iunmap ,eh
-	iunmap ,oe
-	iunmap ,au
-	iunmap ,ae
-	iunmap ,aa
-	iunmap ,OE
-	iunmap ,ah
-	iunmap ,ba
+	imap ,nn
+	imap ,gn
+	imap ,ng
+	imap ,rn
+	imap ,nq
+	imap ,fr
+	imap ,rr
+	imap ,er
+	imap ,fl
+	imap ,ar
+	imap ,rl
+	imap ,ll
+	imap ,sh
+	imap ,zh
+	imap ,xi
+	imap ,zi
+	imap ,rs
+	imap ,rz
+	imap ,ph
+	imap ,bh
+	imap ,th
+	imap ,dh
+	imap ,cc
+	imap ,jj
+	imap ,gh
+	imap ,xx
+	imap ,HH
+	imap ,hh
+	imap ,ue
+	imap ,oi
+	imap ,oe
+	imap ,OE
+	imap ,io
+	imap ,eu
+	imap ,uu
+	imap ,iu
+	imap ,ui
+	imap ,OE
+	imap ,uh
+	imap ,aa
+	imap ,ur
+	imap ,vv
+	imap ,bb
+	imap ,?
+	imap ,:
+	imap ,.
+	imap ,(
+	imap ,)
+	imap ,((
+	imap ,'
+	imap ,;
 endfunction
 
 " As of yet unimplemented:
@@ -100,21 +156,17 @@ endfunction
 "ɡ
 "ɢ
 "ʡ
-"ʂ
-"ʐ
 "θ̼
 "ð̼
 "θ̠
 "ð̠
 "ɹ̠̊
 "ɹ̠
-"ɻ
 "ʕ
 "ʢ
 "ʋ̥
 "ɹ̥
 "ɻ̊
-"ɻ
 "j̊
 "ɰ̊
 "ɰ
@@ -133,10 +185,8 @@ endfunction
 "ɽ̊
 "ɽ
 "ʀ̥
-"ʀ
 "ʜ
 "ʢ
-"ɬ
 "ɮ
 "ɭ̊
 "ʎ̥
@@ -145,9 +195,7 @@ endfunction
 "ʟ̝
 "l̥
 "ɭ̊
-"ɭ
 "ʎ̥
-"ʎ
 "ʟ̥
 "ʟ
 "ʟ̠
@@ -155,23 +203,17 @@ endfunction
 "ɺ̢
 "ʎ̮
 "ʟ̆
-"ʉ
-"ɯ
-"ʏ
 "ɪ̈
 "ʊ̈
-"ø
 "ɘ
 "ɵ
-"ɤ
 "e̞
+"ɯ̽
 "ø̞
 "ɵ̞
 "ɤ̞
 "o̞
-"ɜ
 "ɞ
-"ʌ
 "ɞ̞
 "ä
 "ɒ̈
@@ -180,7 +222,5 @@ endfunction
 "n̼
 "n̥
 "ɳ̊
-"ɳ
 "ŋ̊
-"ɴ
 "p̪
